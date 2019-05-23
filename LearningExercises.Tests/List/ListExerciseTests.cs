@@ -70,5 +70,25 @@ namespace LearningExercises.Tests.List
 			List<int> list = new List<int>() { 2, 5, 15, 0, 3 };
 			Assert.AreEqual(15, _exercise.GetLargestValue(list));
 		}
+		
+		/// <summary>
+		/// Expects a response the number of duplicate entries in the list
+		/// </summary>
+		[TestCase]
+		public void ReturnsCountOfDuplicates()
+		{
+			List<int> list = new List<int>() { 5, 7, 5, 8, 8, 1, 2, 3, 4, 5, 1, 1 };
+			Assert.AreEqual(5, _exercise.CountDuplicates(list));
+		}
+
+		/// <summary>
+		/// Expects a response of the average value in the list
+		/// </summary>
+		[TestCase]
+		public void ReturnsAverageValue()
+		{
+			List<int> list = new List<int>() { 5, 7, 5, 8, 8, 1, 2, 3, 4, 5, 1, 1 };
+			Assert.AreEqual(4, _exercise.Average(list));
+		}
 	}
 }

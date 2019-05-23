@@ -32,6 +32,9 @@ namespace LearningExercises.Xml
 			throw new NotImplementedException();
 		}
 
+		/// <summary>
+		/// Hint: create new nodes in the document
+		/// </summary>
 		public string AddValuesToDocument(XmlDocument document, int[] values)
 		{
 			throw new NotImplementedException();

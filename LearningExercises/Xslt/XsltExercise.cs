@@ -6,18 +6,17 @@ namespace LearningExercises.Xslt
 {
 	public class XsltExercise
 	{
-		/// <summary>
 		/*Expectation is to return a result of
 		 *
 		 * <discography>
 			<album title='Empire Burlesque' artist='Bob Dylan'>
 				<released>1985</released>
 			</album>
-				<album title='Hide your heart' artist='Bonnie Tyler'>
-			<year>1988</released>
+			<album title='Hide your heart' artist='Bonnie Tyler'>
+				<released>1988</released>
 			</album>
-				<album title='Still got the blues' artist='Gary Moore'>
-			<released>1990</released>
+			<album title='Still got the blues' artist='Gary Moore'>
+				<released>1990</released>
 			</album>
 		</discography>
 		 */
@@ -25,7 +24,7 @@ namespace LearningExercises.Xslt
 		{
 			return Transform(@"<xsl:stylesheet version='1.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'>
 									<xsl:template match='/'>
-								  
+									
 									</xsl:template>
 							</xsl:stylesheet>", xml);
 		}
