@@ -16,8 +16,9 @@ namespace LearningExercises.Tests.Dictionary
 		[TestCase]
 		public void ReturnsValueByKey()
 		{
-			var dictionary = new Dictionary<string, int>() { { "1", 1 }, { "2", 2 }, { "3", 3 }, { "4", 4 } };
+			var dictionary = new Dictionary<string, int>() { { "one", 1 }, { "two", 2 }, { "three", 3 }, { "four", 4 } };
 			Assert.AreEqual(3, _exercise.FindItemByKey("3", dictionary));
+			Assert.AreEqual(1, _exercise.FindItemByKey("one", dictionary));
 		}
 
 		/// <summary>
@@ -28,6 +29,8 @@ namespace LearningExercises.Tests.Dictionary
 		{
 			var dictionary = new Dictionary<string, int>() { { "1", 1 }, { "2", 2 }, { "3", 3 }, { "4", 4 } };
 			Assert.AreEqual(10, _exercise.SumValues(dictionary));
+			dictionary = new Dictionary<string, int>() { { "1", 2 }, { "2", 3 }, { "3", 4 }, { "4", 5 } };
+			Assert.AreEqual(14, _exercise.SumValues(dictionary));
 		}
 
 		/// <summary>

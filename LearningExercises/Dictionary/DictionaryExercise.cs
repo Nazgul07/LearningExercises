@@ -30,6 +30,9 @@ namespace LearningExercises.Dictionary
 			}
 		}
 
+		/// <summary>
+		/// Hint: Map the items from the dictionary into a list of KeyValue objects. Try to use the Linq equivelant of an array "Map" function 
+		/// </summary>
 		public List<KeyValue> GetKeyValuePairs(Dictionary<string, int> dictionary)
 		{
 			throw new NotImplementedException();

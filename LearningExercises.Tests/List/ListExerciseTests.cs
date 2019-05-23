@@ -57,6 +57,8 @@ namespace LearningExercises.Tests.List
 		{
 			List<int> list = new List<int>() { 1, 2, 3, 4, 5 };
 			Assert.AreEqual(15, _exercise.Aggregate(list));
+			list = new List<int>() { 10, 20, 30 };
+			Assert.AreEqual(60, _exercise.Aggregate(list));
 		}
 
 		/// <summary>

@@ -27,6 +27,7 @@ namespace LearningExercises.List
 		{
 			throw new NotImplementedException();
 		}
+		
 		public int Aggregate(List<int> list)
 		{
 			throw new NotImplementedException();
