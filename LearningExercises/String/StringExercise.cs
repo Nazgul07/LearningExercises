@@ -46,5 +46,13 @@ namespace LearningExercises.String
 		{
 			throw new NotImplementedException();
 		}
+
+		/// <summary>
+		/// Hint: Separate letters and numbers into 2 collections, then you'll have to convert each number to int. Plus, you get to use Tuples!
+		/// </summary>
+		public (int[] numbers, char[] letters) SeparateLettersAndNumbers(string input)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

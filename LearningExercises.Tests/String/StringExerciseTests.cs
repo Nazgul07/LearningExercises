@@ -62,5 +62,16 @@ namespace LearningExercises.Tests.String
 		{
 			Assert.AreEqual("tHE DOG IS a BROWN DoG WITH FUR", _exercise.InvertCase("The dog is A brown dOg with fur"));
 		}
+
+		/// <summary>
+		/// Expects a Tuple response with 2 string items, one with all numbers and one with all letters
+		/// </summary>
+		[TestCase]
+		public void ReturnsLettersAndNumbersSeperated()
+		{
+			var result = _exercise.SeparateLettersAndNumbers("24th5a6s7l");
+			Assert.AreEqual(new[] { 2, 4, 5, 6, 7 }, result.numbers);
+			Assert.AreEqual(new char[] { 't', 'h', 'a', 's', 'l' }, result.letters);
+		}
 	}
 }
