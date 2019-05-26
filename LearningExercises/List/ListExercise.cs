@@ -72,5 +72,15 @@ namespace LearningExercises.List
 		{
 			throw new NotImplementedException();
 		}
+
+		/// <summary>
+		/// Example: n = 3, result should be list with 3,2,1. Use Recursion.
+		/// Hint: Recursive funtions need a termination condition.
+		/// Explanation: Recursive functions are functions that call themselves to build up the final result until a termination condition is met
+		/// </summary>
+		public virtual void NThough1Recursive(int n, List<int> list)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using LearningExercises.List;
+using Moq;
 using NUnit.Framework;
 using System.Collections.Generic;
 
@@ -89,6 +90,19 @@ namespace LearningExercises.Tests.List
 		{
 			List<int> list = new List<int>() { 5, 7, 5, 8, 8, 1, 2, 3, 4, 5, 1, 1 };
 			Assert.AreEqual(4, _exercise.Average(list));
+		}
+
+		/// <summary>
+		/// Expects a list of a number n through 1m calculated recursively
+		/// </summary>
+		[TestCase]
+		public void CreatesListOfNThrough1Recursively()
+		{
+			Mock<ListExercise> mock = new Mock<ListExercise>() { CallBase = true };
+			List<int> list = new List<int>();
+			mock.Object.NThough1Recursive(5, list);
+			Assert.AreEqual(new List<int> { 5, 4, 3, 2, 1}, list);
+			mock.Verify(x => x.NThough1Recursive(It.IsAny<int>(), It.IsAny<List<int>>()), Times.Exactly(5), "Implementation was not recursive.");
 		}
 	}
 }
