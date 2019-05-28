@@ -91,7 +91,7 @@ namespace LearningExercises.Tests.Xml
 										<Value>8</Value>
 										<Value>9</Value>
 										<Value>10</Value>
-									<Values>
+									</Values>
 								</Root>");
 			Assert.AreEqual(doc.OuterXml, _exercise.CombineValuesFromTwoDocuments(_documentOneThruFive, _documentSixThruTen));
 		}
