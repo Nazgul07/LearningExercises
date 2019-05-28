@@ -93,7 +93,7 @@ namespace LearningExercises.Tests.Xml
 										<Value>10</Value>
 									</Values>
 								</Root>");
-			Assert.AreEqual(doc.OuterXml, _exercise.CombineValuesFromTwoDocuments(_documentOneThruFive, _documentSixThruTen));
+			Assert.AreEqual(doc.OuterXml, _exercise.CombineValuesFromTwoDocuments(_documentOneThruFive.Clone() as XmlDocument, _documentSixThruTen.Clone() as XmlDocument));
 		}
 	}
 }
