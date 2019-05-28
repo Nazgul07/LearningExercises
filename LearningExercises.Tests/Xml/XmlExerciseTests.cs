@@ -78,7 +78,8 @@ namespace LearningExercises.Tests.Xml
 		[TestCase]
 		public void ReturnsDocumentWithCombinedValues()
 		{
-			Assert.AreEqual(@"<Root>
+			XmlDocument doc = new XmlDocument();
+			doc.LoadXml(@"<Root>
 									<Values>
 										<Value>1</Value>
 										<Value>2</Value>
@@ -91,7 +92,8 @@ namespace LearningExercises.Tests.Xml
 										<Value>9</Value>
 										<Value>10</Value>
 									<Values>
-								</Root>", _exercise.CombineValuesFromTwoDocuments(_documentOneThruFive, _documentSixThruTen));
+								</Root>");
+			Assert.AreEqual(doc.OuterXml, _exercise.CombineValuesFromTwoDocuments(_documentOneThruFive, _documentSixThruTen));
 		}
 	}
 }
