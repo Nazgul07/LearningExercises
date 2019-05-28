@@ -69,7 +69,7 @@ namespace LearningExercises.Tests.Xml
 		{
 			XmlDocument _partialDocument = new XmlDocument();
 			_partialDocument.LoadXml(@"<Root><Values></Values></Root>");
-			Assert.AreEqual(_documentOneThruFive.OuterXml, _exercise.AddValuesToDocument(_partialDocument, new[] { 1, 2, 3, 4, 5 }));
+			Assert.AreEqual(_documentOneThruFive.OuterXml, _exercise.AddValuesToDocument(_partialDocument.Clone() as XmlDocument, new[] { 1, 2, 3, 4, 5 }));
 		}
 
 		/// <summary>
