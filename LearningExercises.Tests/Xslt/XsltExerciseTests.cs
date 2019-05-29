@@ -55,7 +55,7 @@ namespace LearningExercises.Tests.Xslt
 									<year>1990</year>
 								  </cd>
 								</catalog>");
-			Assert.AreEqual(expected.OuterXml, actual.OuterXml);
+			Assert.AreEqual(expected.DocumentElement.OuterXml, actual.Documentement.OuterXml);
 		}
 	}
 }
